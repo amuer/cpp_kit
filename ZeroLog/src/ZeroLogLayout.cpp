@@ -37,7 +37,8 @@ namespace log4cpp
     int hour    = newtime.tm_hour;
     int minute  = newtime.tm_min;
     int seconds = newtime.tm_sec;
-    pthread_t pid = pthread_self();
+//    pthread_t pid = pthread_self();
+    pthread_t pid = gettid();
 
     snprintf(buff, 64, "%04d-%02d-%02d %02d:%02d:%02d %u ", year, month, day, hour, minute, seconds, pid);
 

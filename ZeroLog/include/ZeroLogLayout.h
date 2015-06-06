@@ -9,6 +9,8 @@
 #define ZEROLOGLAYOUT_H_
 
 #include <log4cpp/Layout.hh>
+#include <sys/syscall>
+#define gettid() syscall(__NR_gettid)
 
 namespace log4cpp
 {
